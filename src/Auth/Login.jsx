@@ -31,7 +31,7 @@ const Login = () =>{
     const login = (e) => {
         e.preventDefault()
         try{
-            axios.post("http://localhost:8080/login",user)
+            axios.post("https://ecommerce-backend-mrdn.onrender.com/login",user)
             .then(res => {
                 
                 if(res.data === "success"){
