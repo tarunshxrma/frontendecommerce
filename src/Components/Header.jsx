@@ -56,7 +56,7 @@ const Header = () =>{
                     
                     <Link to='/Cart' element={<Cart/>}><div className='items'><img src={bagIcon} alt="bagIcon"/><span>{cartItems.length}Items</span></div></Link>
 
-                    <Link><div><img src={searchIcon} alt="Search"/></div></Link>
+                    <Link><div><img src={searchIcon} alt="Search" className='search'/></div></Link>
                 </div>
             </div>
             <hr/>

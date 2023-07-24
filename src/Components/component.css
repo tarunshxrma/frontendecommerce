@@ -172,14 +172,13 @@ main::-webkit-scrollbar {
 }
 
 
-@media (max-width: 400px){
-    
+@media screen and (min-width: 320px) and (max-width: 600px) {
+    html{
+        width: 350%;
+    }
     .links{
         display: none;
     }
-    /* .Nav-main-container .links{
-        display: none;
-    } */
 
     .mobile-nav{
         display: grid;
@@ -189,6 +188,7 @@ main::-webkit-scrollbar {
         z-index: 99;
         backdrop-filter: blur(23px);
         -webkit-backdrop-filter: blur(23px);
+        width: 1300px;
     }
 
     .mobile-nav li{
@@ -205,16 +205,71 @@ main::-webkit-scrollbar {
         letter-spacing: 0.4px;
         color: #FFFFFF;
         opacity: 1;
-        
+        font-size: 5rem;
+        padding: 2rem;
     }
     .menu-bar{
         display: block;
-        width: 50px;
+        width: 200px;
         /* position: relative;
         left: 100px; */
-        margin-left: 230px;
-        margin-top: -81px;
+        margin-left: 30px;
+        margin-top: -200px;
         cursor: pointer;
     }
     
+    .Nav-main-container img{
+        width: 800px;
+        height: 80px;
+        margin-left: -25px;
+        margin-bottom: 2rem;
+    }
+    
+    .main-container{
+        height: 11rem;
+        font-size: 3rem;
+    }
+
+    .left-container select{
+        display: none;
+    }
+    .items span{
+        display: none;
+    }
+    .profile img{
+        width: 5rem;
+        margin-left: 40rem;
+    }
+    .profile span{
+        font-size: 7rem;
+    }
+    .items img{
+        display: none;
+    }
+    .items a img{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .body{
+        height: 170rem;
+        font-size: 2rem;
+    }
+    .main{
+        height: 60rem;
+        width: 60rem;
+    }
+    .login{
+        height: 60rem;
+        font-size: 2rem;
+    }
+    .main-sign{
+        width: 60rem;
+        height: 60rem;
+        font-size: 5rem;
+    }
+    .signup{
+        font-size: 3rem;
+    }
 }
