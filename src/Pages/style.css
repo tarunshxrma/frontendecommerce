@@ -688,3 +688,234 @@ box-shadow: 1px 0px 15px grey;
     background-color: black;
     color: white;
 }
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+    .seller-section h1{
+        font-size: 5rem;
+        margin-top: 5rem;
+    }
+    
+    .seller-content a{
+        font-size: 4rem;
+        margin-top: 3rem;
+    }
+    
+    .seller-options-container{
+        flex-direction: column;
+    }
+    
+    .option-section{
+        width: 100%;
+    }
+    .product{
+        width: 7rem;
+        height: 2rem;
+        font-size: 3rem;
+        padding: 1.5rem;
+    }
+    .seller-image{
+        width: 25rem;
+        height: 25rem;
+    }
+    .product-name{
+        font-size: 3rem;
+        margin-top: 5rem;
+        line-height: 5rem;
+    }
+    .discount-price,.original-price{
+        font-size: 4rem;
+    }
+    .load{
+        font-size: 3rem;
+        margin: 5rem 0;
+    }
+    .load-hr{
+        display: none;
+    }
+    .our-details{
+        flex-direction: column;
+    }
+    
+    .shipping,.refund,.support{
+        text-align: center;
+        width: 50rem;
+    }
+    
+    .shipping img,.refund img,.support img{
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .details-title{
+        font-size: 5rem;
+    }
+    
+    .product-details{
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-top: 0;
+    }
+    .feature-heading {
+        font-size: 5rem;
+    }
+    .featured-products{
+        flex-direction: column;
+    }
+    .featured{
+        width: 100%;
+    }
+    
+    .featured img{
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .featured-products-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .feature-title {
+        font-size: 3rem;
+       width: 30rem;
+       line-height: 3rem;
+       margin-left: 3rem;
+    }
+    .featured-products-details .discount-price{
+        margin-top: 5rem;
+    }
+    
+    .footer-container{
+    flex-direction: column;
+    }
+    
+    .ishop,.follow,.contact{
+        width: 50rem;
+    }
+    
+    .ishop img{
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .ishop p,.follow p,.contact p{
+        font-size: 3rem;
+        margin-top: 0;
+        line-height: 3rem;
+    }
+    .social-images img{
+        width: 3rem;
+        height: 3rem;
+    }
+    .footer-container-details{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .downfooter-title{
+        font-size: 7rem;
+    }
+    .greyfooter p{
+        font-size: 4rem;
+    }
+    .card-img{
+        width: 8rem;
+        height: 8rem;
+        margin-top: 5rem;
+    }
+    .w{
+        margin-left: 2rem;
+    }
+    .w h3{
+        font-size: 5rem;
+    }
+    
+    .store__left{
+        margin-left: -3rem;
+    }
+    .store_accesories,.storeprices,.storecolors,.store_brand{
+        width: 20rem;
+    }
+    .store__accesories h2{
+        font-size: 2.5rem;
+    }
+    .store__prices h3,
+    .store__colors h3,
+    .store__brand h3{
+        font-size: 2.5rem;
+    }
+    .store_accesories p,.store_prices p,
+    .store__colors p,
+    .store__brand p{
+        font-size: 2.5rem;
+    }
+    
+    .store__banner{
+        width: 55rem;
+        height: 30rem;
+        margin-left: 5rem;
+        font-size: 2.3rem;
+        padding: 1rem;
+    }
+    .store__productsList{
+        margin-left: 7rem;
+    }
+    
+    .product-home{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .store-productCard{
+        width: 45rem;
+        height: fit-content;
+    }
+    
+    .store-productCard p{
+        font-size: 3rem;
+    }
+    
+    .product-price{
+        font-size: 5rem;
+    }
+    
+    .add-cart{
+        height: 5rem;
+    }
+    
+    .add-cart-text{
+        font-size: 3rem;
+    }
+    
+    .page-heading{
+        font-size: 5rem;
+    }
+    
+    .home{
+        flex-direction: column;
+        margin-left: 12rem;
+    }
+    
+    .productCard{
+        width: 55rem;
+        height: fit-content;
+    }
+    
+    .productCard img{
+        height: 30rem;
+    }
+    
+    .background-color{
+        width: 97rem;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    }

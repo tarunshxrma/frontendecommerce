@@ -171,10 +171,9 @@ main::-webkit-scrollbar {
     cursor: pointer;
 }
 
-
 @media screen and (min-width: 320px) and (max-width: 600px) {
     html{
-        width: 350%;
+        width: 380%;
     }
     .links{
         display: none;
@@ -188,7 +187,7 @@ main::-webkit-scrollbar {
         z-index: 99;
         backdrop-filter: blur(23px);
         -webkit-backdrop-filter: blur(23px);
-        width: 1300px;
+        width: 1400px;
     }
 
     .mobile-nav li{
@@ -213,8 +212,8 @@ main::-webkit-scrollbar {
         width: 200px;
         /* position: relative;
         left: 100px; */
-        margin-left: 30px;
-        margin-top: -200px;
+        margin-left: 50px;
+        margin-top: -210px;
         cursor: pointer;
     }
     
@@ -244,7 +243,9 @@ main::-webkit-scrollbar {
         font-size: 7rem;
     }
     .items img{
-        display: none;
+        width: 6rem;
+        height: 6rem;
+        margin-left: -1rem;
     }
     .items a img{
         display: none;
@@ -272,4 +273,42 @@ main::-webkit-scrollbar {
     .signup{
         font-size: 3rem;
     }
+    .Iphone-img{
+        height: 50rem;
+    }
+        .cart{
+            height: fit-content;
+        }
+        .no-item{
+            font-size: 6rem;
+        }
+        .cartItem img {
+            width: 15rem;
+            height: 15rem;
+        }
+    
+        .cartItem article {
+            font-size: 2.5rem;
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
+    
+        .items button{
+            width: 5rem;
+            height: 5rem;
+            font-size: 2.5rem;
+            margin-right: 2rem;
+        }
+    
+        .qty {
+            font-size: 3.5rem;
+            margin-right: 2rem;
+        }
+        .delete{
+            width: 5rem;
+            height: 5rem;
+        }
+        .cart aside h2{
+            font-size: 3.5rem;
+        }
 }
