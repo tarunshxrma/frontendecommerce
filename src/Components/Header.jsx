@@ -10,6 +10,8 @@ import { log, logged, logout } from '../Auth/Login'
 
 const Header = () =>{
 
+    const isLogged = localStorage.getItem('recievedToken')
+
     const { cartItems } = useSelector((state) => state.cart);
 
     const navigate=useNavigate()
@@ -17,6 +19,11 @@ const Header = () =>{
     const loginPage=()=>{
         navigate("/Login")
     }
+
+    const logoutUser = () =>{
+        localStorage.clear()
+    }
+
     return(
         <div>
             <div className = "main-container">
@@ -41,15 +48,18 @@ const Header = () =>{
                     <div className="profile">
                         <img src={profileIcon} alt="profile" onClick={loginPage}/>
                         <span>      
-                        {!logged ? ( <>
-                            <span onClick={loginPage}>Login</span>
-                        </>)
-                        : (
+                        {isLogged ? (
                             <>
                             <span >{log}</span>
-                            <button onClick={logout} className='logout'>logout</button>
+                            <button onClick={logoutUser} className='logout'>logout</button>
                             </>
-                          )}
+                          )
+                          :
+                          ( <>
+                            <span onClick={loginPage}>Login</span>
+                        </>)
+                        
+                        }
                         
                         </span>
                     </div>

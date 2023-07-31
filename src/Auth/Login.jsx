@@ -8,7 +8,7 @@ export let  log, logged, logout;
 
 const Login = () =>{
 
-    const [isLoggedin, setIsLoggedin] = useState(false);
+    // const [isLoggedin, setIsLoggedin] = useState(false);
     
     const navigate = useNavigate()
 
@@ -25,7 +25,7 @@ const Login = () =>{
             [name]: value
         })
         localStorage.setItem('token-info', JSON.stringify(user));
-        setIsLoggedin(true);
+        // setIsLoggedin(true);
     }
 
     const login = (e) => {
@@ -33,14 +33,18 @@ const Login = () =>{
         try{
             axios.post("https://ecommerce-backend-mrdn.onrender.com/login",user)
             .then(res => {
-                
-                if(res.data === "success"){
-                    log = user.email
-                    // console.log(log)
+                const token = res.data.token
+                if(res.data.message === "User logged in successfully"){
+                    localStorage.setItem('recievedToken', token)
                     alert("Login Successfully")
                     navigate("/")
-                    
                 }
+                else if (res.data === "User is not registered Register first") {
+                            alert("User is not registered Please register first!!")
+                        }
+                else if (res.data === "Password does not match Try entering the correct password") {
+                            alert("Password does not match Try entering the correct password!!")
+                        }
                 // else{
 
                 //     alert('Wrong Email or Password')
@@ -53,13 +57,13 @@ const Login = () =>{
         }
     }
 
-    const logoutUser = () => {
-        localStorage.removeItem('token-info');
-        setIsLoggedin(false);
-    };
+    // const logoutUser = () => {
+    //     localStorage.removeItem('token-info');
+    //     // setIsLoggedin(false);
+    // };
 
-    logout = logoutUser;
-    logged = isLoggedin;
+    // logout = logoutUser;
+    // logged = isLoggedin;
 
     return(
         <div className='body'>

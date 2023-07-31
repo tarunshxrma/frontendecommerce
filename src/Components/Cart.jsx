@@ -1,14 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
 
 const Cart = () => {
-  const navigate = useNavigate()
 
   const { cartItems, subTotal, tax,  total } = useSelector(
     (state) => state.cart
   );
+  const [CART,setCART] = useState([...cartItems])
+  let [SUBTOTAL,setSUBTOTAL] = useState(subTotal)
+  const [TAX,setTAX] = useState(tax)
+  const [TOTAL,setTOTAL] = useState(total)
   const dispatch = useDispatch();
 
   const increment = (id) => {
@@ -37,8 +40,8 @@ const Cart = () => {
   return (
     <div className="cart">
       <main>
-        {cartItems.length > 0 ? (
-          cartItems.map((i) => (
+        {CART.length > 0 ? (
+          CART.map((i) => (
             <CartItem
             image={i.image}
             name={i.name}
@@ -56,17 +59,20 @@ const Cart = () => {
         )}
             <div>
               <button onClick={()=>{
+                setCART(CART.length=0)
+                setSUBTOTAL(SUBTOTAL === 0)
+                setTAX(TAX === 0)
+                setTOTAL(TOTAL === 0)
                 alert("Order Placed Successfully!")
-                navigate('/')
               }}>Checkout</button>
             </div>
       </main>
 
       <aside className="aside">
-        <h2>Subtotal: ₹{subTotal}</h2>
+        <h2>Subtotal: ₹{SUBTOTAL}</h2>
         {/* <h2>Shipping: ₹{shipping}</h2> */}
-        <h2>Tax: ₹{tax}</h2>
-        <h2>Total:₹{total}</h2>
+        <h2>Tax: ₹{TAX}</h2>
+        <h2>Total:₹{TOTAL}</h2>
       </aside>
     </div>
   );
