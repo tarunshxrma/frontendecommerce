@@ -1,8 +1,11 @@
 import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 const Cart = () => {
+  const navigate = useNavigate()
+
   const { cartItems, subTotal, tax,  total } = useSelector(
     (state) => state.cart
   );
@@ -37,20 +40,26 @@ const Cart = () => {
         {cartItems.length > 0 ? (
           cartItems.map((i) => (
             <CartItem
-              image={i.image}
-              name={i.name}
-              price={i.price}
-              qty={i.quantity}
-              id={i.id}
-              key={i.id}
-              decrement={decrement}
-              increment={increment}
-              deleteHandler={deleteHandler}
+            image={i.image}
+            name={i.name}
+            price={i.price}
+            qty={i.quantity}
+            id={i.id}
+            key={i.id}
+            decrement={decrement}
+            increment={increment}
+            deleteHandler={deleteHandler}
             />
           ))
         ) : (
           <h1 className="no-item">No Items Yet</h1>
         )}
+            <div>
+              <button onClick={()=>{
+                alert("Order Placed Successfully!")
+                navigate('/')
+              }}>Checkout</button>
+            </div>
       </main>
 
       <aside className="aside">
@@ -81,9 +90,9 @@ const CartItem = ({
     </article>
 
     <div className="items">
-      <button onClick={() => decrement(id)}>-</button>
+      <button onClick={() => decrement(id)} className="incre">-</button>
       <p className="qty">{qty}</p>
-      <button onClick={() => increment(id)}>+</button>
+      <button onClick={() => increment(id)} className="decre">+</button>
     </div>
 
     <AiFillDelete onClick={() => deleteHandler(id)}  className="delete"/>

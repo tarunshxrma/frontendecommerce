@@ -23,6 +23,7 @@ function StoreProducts(){
       dispatch({ type: "addToCart", payload: options });
       dispatch({ type: "calculatePrice" });
       toast.success("Added To Cart");
+      alert("Item Added to Cart!!")
     };
   return (
       <>

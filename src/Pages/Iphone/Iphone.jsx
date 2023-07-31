@@ -22,6 +22,7 @@ function Iphone(){
     dispatch({ type: "addToCart", payload: options });
     dispatch({ type: "calculatePrice" });
     toast.success("Added To Cart");
+    alert("Item added to Cart!!")
   };
 
     return (

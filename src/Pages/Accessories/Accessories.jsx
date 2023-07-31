@@ -1,4 +1,3 @@
-
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux";
@@ -22,6 +21,7 @@ function Accessories(){
       dispatch({ type: "addToCart", payload: options });
       dispatch({ type: "calculatePrice" });
       toast.success("Added To Cart");
+      alert("Item Added to cart!!")
     };
 
       return (
